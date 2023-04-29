@@ -76,34 +76,42 @@ export const sideBarData = [
       {
         icon: <LoanRequestsSvg />,
         title: "Loan Products",
+        url: "LoanRequest",
       },
       {
         icon: <SavingsSvg />,
         title: "Savings Products",
+        url: "SavingProducts",
       },
       {
         icon: <FessSvgs />,
         title: "Fees and Charges",
+        url: "feesChanges",
       },
       {
         icon: <TransactionsSvg />,
         title: "Transactions",
+        url: "transactions",
       },
       {
         icon: <ServidesSvg />,
         title: "Services",
+        url: "savings",
       },
       {
         icon: <FaUserCog />,
         title: "Service Account",
+        url: "serviceAccount",
       },
       {
         icon: <FaChartBar />,
         title: "Settlements",
+        urll: "settlements",
       },
       {
         icon: "",
         title: "Reports",
+        url: "reports",
       },
     ],
   },
@@ -113,14 +121,17 @@ export const sideBarData = [
       {
         icon: <FaSlidersH />,
         title: "Preferences",
+        url: "preferences",
       },
       {
         icon: <Badge />,
         title: "Fees and Pricing",
+        ur: "feesandpricing",
       },
       {
         icon: <FaClipboardList />,
         title: "Audit Logs",
+        url: "auditlogs",
       },
     ],
   },
