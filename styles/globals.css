@@ -1,0 +1,21 @@
+body{
+    background: #fff;
+    margin: 0px;
+    padding: 0px;
+}
+@font-face {
+    font-family: 'Avenir';
+    src: url('/Assets/Fonts/Avenir/AvenirNextLTPro-Regular.otf');
+    font-weight: 500;
+    font-style: normal;
+    }
+    @font-face {
+        font-family: 'Poppins';
+        src: url('/Assets/Fonts/Poppins/Poppins-Light.ttf');
+        font-weight: 500;
+        font-style: normal;
+        }
+        p{
+            font-family: 'poppins';
+            font-weight: 100;
+        }

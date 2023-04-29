@@ -1,0 +1,30 @@
+.fill{
+    background: #39CDCC;
+    padding: 15px 13px;
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+    font-family: 'Avenir Next';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 19px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+cursor: pointer;
+/* 6 */
+
+color: #FFFFFF;
+
+}
+.outline{
+    cursor: pointer;
+    border: 1px solid #545F7D;
+border-radius: 8px;
+background: none;
+color: #545F7D;
+padding: 15px 13px;
+}

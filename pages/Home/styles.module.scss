@@ -1,0 +1,101 @@
+.homeGrid{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    // margin-top: 148px;
+}
+.welcome{
+    margin-bottom: 60px;
+}
+.welcome h1{
+    font-family: 'Avenir Next';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 55px;
+/* identical to box height */
+
+letter-spacing: -0.04em;
+
+color: #213F7D;
+}
+.paswordInput{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.paswordInput input{
+    width: 100%;
+}
+.paswordInput p{
+  position: absolute;
+  right: 30px;
+  cursor: pointer;
+
+}
+.welcome p{
+    font-family: 'Avenir Next';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 27px;
+/* identical to box height */
+
+
+color: #545F7D;
+
+}
+.logo{
+    padding-top: 107px ;
+    padding-left: 97px;
+    width: 40%;
+    position: absolute;
+}
+.images{
+width: 52%;
+padding-right: 69px ;
+padding-left: 67px;
+}
+.loginInputs{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 48%;
+    padding-left: 100px;
+    padding-right: 157px;
+    height: 100%;
+    background: #FFFFFF;
+
+    padding-right: 154px;
+    padding-left: 100px;
+box-shadow: 0px 15px 90px rgba(0, 0, 0, 0.03);
+}
+.inputs{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; 
+    gap: 24px;
+}
+.inputs p{
+    font-family: 'Avenir Next';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 16px;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+
+color: #39CDCC;
+
+}
+.inputs input{
+    background: #FFFFFF;
+border: 2px solid rgba(84, 95, 125, 0.15);
+border-radius: 5px;
+padding: 17px 16px;
+}
+.forgotPasswordLogin{
+
+    margin-top: 30px;
+}
