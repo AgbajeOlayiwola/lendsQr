@@ -19,3 +19,7 @@ body{
             font-family: 'poppins';
             font-weight: 100;
         }
+      
+        table{
+            border-collapse: collapse;
+    }

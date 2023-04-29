@@ -53,6 +53,7 @@ const UsersData = ({
             <MdOutlineMoreVert />
           </td>
         </tr>
+
         <div className={showMoreI ? styles.moreI : styles.donstShowI}>
           <div>
             <AiOutlineEye />
