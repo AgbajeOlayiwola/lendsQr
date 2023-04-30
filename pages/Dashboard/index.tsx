@@ -48,7 +48,7 @@ const Dashboard = () => {
   const handlePageChange = (page: any) => {
     setCurrentPage(page);
   };
-  const paginatePosts = Paginate(apiData, currentPage, pageSize);
+  const paginateData = Paginate(apiData, currentPage, pageSize);
   return (
     <>
       <DashboardLayout>
@@ -343,7 +343,7 @@ const Dashboard = () => {
                   </tr>
                 </thead>
                 {apiData
-                  ? Object.keys(paginatePosts).map((index, item) => (
+                  ? Object.keys(paginateData).map((index, item) => (
                       <>
                         <UsersData
                           action={() =>
@@ -367,11 +367,11 @@ const Dashboard = () => {
                               })
                           }
                           key={index}
-                          orgName={paginatePosts[item].orgName}
-                          userName={paginatePosts[item].userName}
-                          email={paginatePosts[item].email}
-                          phoneNumbr={paginatePosts[item].phoneNumber}
-                          createdAt={paginatePosts[item].createdAt}
+                          orgName={paginateData[item].orgName}
+                          userName={paginateData[item].userName}
+                          email={paginateData[item].email}
+                          phoneNumbr={paginateData[item].phoneNumber}
+                          createdAt={paginateData[item].createdAt}
                         />
                       </>
                     ))
