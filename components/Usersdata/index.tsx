@@ -25,23 +25,23 @@ const UsersData = ({
     <>
       <tbody className={styles.tbody}>
         <tr>
-          <td>
+          <td onClick={action} className={styles.usrName}>
             <p>{orgName}</p>
           </td>
           <td onClick={action} className={styles.usrName}>
             <p>{userName}</p>
           </td>
-          <td>
+          <td onClick={action} className={styles.usrName}>
             <p>{email}</p>
           </td>
-          <td>
+          <td onClick={action} className={styles.usrName}>
             <p>{phoneNumbr}</p>
           </td>
-          <td>
+          <td onClick={action} className={styles.usrName}>
             <p>{createdAt}</p>
           </td>
 
-          <td>
+          <td onClick={action} className={styles.usrName}>
             <div className={styles.inactive}>
               <p>Inactive</p>
             </div>
