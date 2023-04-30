@@ -66,11 +66,13 @@ const Dashboard = () => {
               <h1>User Details</h1>
               <div>
                 <ButtonComponent
+                  action={""}
                   type="submit"
                   text="Blacklist User"
                   fill={false}
                 />
                 <ButtonComponent
+                  action={""}
                   type="submit"
                   text="Activate User"
                   fill={false}
@@ -355,10 +357,8 @@ const Dashboard = () => {
                                 }
                               )
                               .then((response) => {
-                                console.log(response);
                                 setUsersFullData(response.data);
                                 if (usersFullData !== undefined) {
-                                  console.log(usersFullData);
                                   setUsrsFull((prev) => !prev);
                                 }
                               })

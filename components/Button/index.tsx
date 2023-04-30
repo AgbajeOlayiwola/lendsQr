@@ -5,13 +5,16 @@ const ButtonComponent = ({
   type,
   text,
   fill,
+  action,
 }: {
   type: string;
   fill: boolean;
   text: string;
+  action: any;
 }) => {
   return (
     <button
+      onClick={action}
       type="submit"
       className={fill === true ? styles.fill : styles.outline}
     >

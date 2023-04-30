@@ -95,8 +95,18 @@ const UsersData = ({
               </select>
             </div>
             <div className={styles.buttons}>
-              <ButtonComponent type="submit" text="Reset" fill={false} />
-              <ButtonComponent type="submit" text="Filter" fill={true} />
+              <ButtonComponent
+                action={""}
+                type="submit"
+                text="Reset"
+                fill={false}
+              />
+              <ButtonComponent
+                action={""}
+                type="submit"
+                text="Filter"
+                fill={true}
+              />
             </div>
           </form>
         </div>

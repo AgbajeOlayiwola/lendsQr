@@ -4,3 +4,19 @@
     padding-right: 11px;
     padding-bottom: 269px;
 }
+
+@media screen and (max-width: 990px) {
+.dashlayout{
+
+        /* display: flex; */
+        /* padding-top: 208px; */
+        padding-left: 28px;
+        /* padding-right: 11px; */
+        /* display: none; */
+        /* padding-bottom: 269px; */
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    
+}
+}

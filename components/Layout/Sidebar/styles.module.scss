@@ -87,3 +87,20 @@ color: #213F7D;
   background: #39cdcd1a;
   gap: 10px;
 }
+
+@media screen and (max-width: 990px) {
+.sideBar {
+  height: 686px;
+  margin-left: -43px;
+  overflow: scroll;
+  position: fixed;
+  background: #FFFFFF;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+  width: 283px;
+  padding-top: 4px;
+  padding-bottom: 136px;
+  z-index: 1;
+  display: none;
+  top: 133px;
+}
+}

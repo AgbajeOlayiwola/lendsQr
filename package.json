@@ -21,13 +21,17 @@
     "lodash": "^4.17.21",
     "next": "13.3.1",
     "react": "18.2.0",
+    "react-burger-menu": "^3.0.9",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
     "react-paginate": "^8.2.0",
     "sass": "^1.62.1",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "validator": "^13.9.0"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.194"
+    "@types/lodash": "^4.14.194",
+    "@types/react-burger-menu": "^2.8.3",
+    "@types/validator": "^13.7.15"
   }
 }
