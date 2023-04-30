@@ -1,137 +1,126 @@
-.homeGrid{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-    // margin-top: 148px;
-}
-.welcome{
-    margin-bottom: 60px;
-}
-.welcome h1{
-    font-family: 'Avenir Next';
-font-style: normal;
-font-weight: 700;
-font-size: 40px;
-line-height: 55px;
-/* identical to box height */
+$color_1: #213F7D;
+$color_2: #545F7D;
+$color_3: #39CDCC;
+$color_4: red;
+$font-family_1: 'Avenir Next';
 
-letter-spacing: -0.04em;
-
-color: #213F7D;
+.homeGrid {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100vh;
+	// margin-top: 148px;
 }
-.paswordInput{
-    display: flex;
-    align-items: center;
-    position: relative;
+.welcome {
+	margin-bottom: 60px;
+	h1 {
+		font-family: $font-family_1;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 55px;
+		letter-spacing: -0.04em;
+		color: $color_1;
+	}
+	p {
+		font-family: $font-family_1;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 27px;
+		color: $color_2;
+	}
 }
-.paswordInput input{
-    width: 100%;
+.paswordInput {
+	display: flex;
+	align-items: center;
+	position: relative;
+	input {
+		width: 100%;
+	}
+	p {
+		position: absolute;
+		right: 30px;
+		cursor: pointer;
+	}
 }
-.paswordInput p{
-  position: absolute;
-  right: 30px;
-  cursor: pointer;
-
+.logo {
+	padding-top: 107px;
+	padding-left: 97px;
+	width: 40%;
+	position: absolute;
 }
-.welcome p{
-    font-family: 'Avenir Next';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 27px;
-/* identical to box height */
-
-
-color: #545F7D;
-
+.images {
+	width: 52%;
+	padding-right: 69px;
+	padding-left: 67px;
 }
-.logo{
-    padding-top: 107px ;
-    padding-left: 97px;
-    width: 40%;
-    position: absolute;
+.loginInputs {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 48%;
+	padding-left: 100px;
+	padding-right: 157px;
+	height: 100%;
+	background: #FFFFFF;
+	padding-right: 154px;
+	padding-left: 100px;
+	box-shadow: 0px 15px 90px rgba(0, 0, 0, 0.03);
 }
-.images{
-width: 52%;
-padding-right: 69px ;
-padding-left: 67px;
+.inputs {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	gap: 24px;
+	p {
+		font-family: $font-family_1;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 16px;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: $color_3;
+	}
+	input {
+		background: #FFFFFF;
+		border: 2px solid rgba(84, 95, 125, 0.15);
+		border-radius: 5px;
+		padding: 17px 16px;
+	}
 }
-.loginInputs{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 48%;
-    padding-left: 100px;
-    padding-right: 157px;
-    height: 100%;
-    background: #FFFFFF;
-
-    padding-right: 154px;
-    padding-left: 100px;
-box-shadow: 0px 15px 90px rgba(0, 0, 0, 0.03);
+.forgotPasswordLogin {
+	margin-top: 30px;
 }
-.inputs{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column; 
-    gap: 24px;
-}
-
-.inputs p{
-    font-family: 'Avenir Next';
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 16px;
-letter-spacing: 0.1em;
-text-transform: uppercase;
-
-color: #39CDCC;
-
-}
-.inputs input{
-    background: #FFFFFF;
-border: 2px solid rgba(84, 95, 125, 0.15);
-border-radius: 5px;
-padding: 17px 16px;
-}
-
-.forgotPasswordLogin{
-
-    margin-top: 30px;
-}
-.error{
-    color: red !important;
-    margin-top: -15px;
-    font-size: 10px;
+.error {
+	color: $color_4 !important;
+	margin-top: -15px;
+	font-size: 10px;
 }
 @media screen and (max-width: 990px) {
-    .images{
-        width: 52%;
-        padding-right: 69px ;
-        padding-left: 67px;
-        display: none;
-        }
-        .loginInputs{
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            width: 100%;
-            padding-left: 100px;
-            padding-right: 157px;
-            height: 100%;
-            background: #FFFFFF;
-            padding-right: 24px;
-            padding-left: 20px;
-            box-shadow: 0px 15px 90px rgba(0, 0, 0, 0.03);
-        }
-        .logo {
-            padding-top: 27px;
-            /* padding-left: 97px; */
-            width: 100%;
-            position: fixed;
-        }
-
-
+	.images {
+		width: 52%;
+		padding-right: 69px;
+		padding-left: 67px;
+		display: none;
+	}
+	.loginInputs {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		width: 100%;
+		padding-left: 100px;
+		padding-right: 157px;
+		height: 100%;
+		background: #FFFFFF;
+		padding-right: 24px;
+		padding-left: 20px;
+		box-shadow: 0px 15px 90px rgba(0, 0, 0, 0.03);
+	}
+	.logo {
+		padding-top: 27px;
+		width: 100%;
+		position: fixed;
+	}
 }

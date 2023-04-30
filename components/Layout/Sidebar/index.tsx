@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import styles from "./styles.module.scss";
-import { BiChevronDown } from "react-icons/bi";
+import { BiChevronDown, BiSearch } from "react-icons/bi";
 import BriefCaseSvg from "../../SVGs/briefCaseSvg";
 import { sideBarData } from "../../Data";
 import { useRouter } from "next/router";
 import { slide as Menu } from "react-burger-menu";
+import NotificationSvg from "../../SVGs/NotificationSvg";
+import { BsCaretDownFill } from "react-icons/bs";
 
 var burgerMenuStyle = {
   bmBurgerButton: {
@@ -107,6 +109,25 @@ const SideBar = () => {
       ) : (
         <Menu styles={burgerMenuStyle}>
           <div className={styles.sideBar}>
+            <div className={styles.personal}>
+              <div className={styles.docs}>
+                <p>Docs</p>
+                <NotificationSvg />
+              </div>
+
+              <div className={styles.user}>
+                <img src="/Assets/Images/avatar.png" width={48} height={48} />
+                <p>Adedeji</p>
+                <BsCaretDownFill />
+              </div>
+            </div>
+            <div className={styles.search}>
+              <input type="text" />
+              <div className={styles.biSearch}>
+                <BiSearch />
+              </div>
+            </div>
+
             <div className={styles.sideBarItem}>
               <BriefCaseSvg />
               <p> Switch Organization</p>

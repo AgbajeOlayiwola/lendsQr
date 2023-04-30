@@ -1,61 +1,63 @@
-.navCover{
-    display: flex;
-    align-items: center;
-    padding-top: 36px;
-    padding-bottom: 42px;
-    padding-right: 30px;
-    padding-left: 30px;
-    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
-    position:absolute;
-    width: 100vw;
-    z-index: 9999999;
-    gap: 341px;
-    position: fixed;
-    background: white;
+$color_1: white;
+
+.navCover {
+	display: flex;
+	align-items: center;
+	padding-top: 36px;
+	padding-bottom: 42px;
+	padding-right: 30px;
+	padding-left: 30px;
+	box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+	position: absolute;
+	width: 100vw;
+	z-index: 9999999;
+	gap: 341px;
+	position: fixed;
+	background: white;
 }
-.logoSearch{
-    display: flex;
-    gap: 162px;
-    width: 50%;
-    justify-content: space-between;
-    align-items: center;
+.logoSearch {
+	display: flex;
+	gap: 162px;
+	width: 50%;
+	justify-content: space-between;
+	align-items: center;
 }
-.search{
-    display: flex;
-    width: 62%;
+.search {
+	display: flex;
+	width: 62%;
+	input {
+		background: #FFFFFF;
+		width: 100%;
+		border: 1px solid #213F7D;
+		border-radius: 8px;
+		border-top-right-radius: 0px;
+		border-bottom-right-radius: 0px;
+	}
 }
-.biSearch{
-    background: #39CDCC;
-    color: white;
-    border-radius: 8px;
-    border: none;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    padding: 13px 21px;
+.biSearch {
+	background: #39CDCC;
+	color: $color_1;
+	border-radius: 8px;
+	border: none;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	padding: 13px 21px;
 }
-.search input{
-    background: #FFFFFF;
-    width: 100%;
-    border: 1px solid #213F7D;
-    border-radius: 8px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
+.personal {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 33px;
 }
-.personal{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 33px;
+.user {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
 }
-.user{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-}
-.docs{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
+.docs {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 50px;
 }

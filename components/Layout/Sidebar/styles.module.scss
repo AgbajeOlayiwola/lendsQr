@@ -1,106 +1,137 @@
-.sideBar{
-  height: 686px;
-  overflow: scroll;
-  position: fixed;
-  background: #FFFFFF;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
-  width: 283px;
-  padding-top: 39px;
-  padding-bottom: 136px;
-  z-index: 1;
-  top: 133px;
-}
-.sideBar::-webkit-scrollbar {
-    display: none;
-  }
+$color_1: #213F7D;
+$font-family_1: 'Poppins';
 
-  .sideBar{
-    -ms-overflow-style: none; 
-    scrollbar-width: none;
-  }
-  .sideBarItem{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 48px;
-    padding-left: 30px;
-    padding-top: 11px;
-    padding-bottom: 10px;
-  }
-  .sideBarItem p{
-    font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 19px;
-/* identical to box height */
-
-
-color: #213F7D;
-
-
-  }
-  .sideBarItemm{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 48px;
-    padding-left: 30px;
-    padding-top: 11px;
-    padding-bottom: 10px;
-  }
-  .sideBarItem p{
-    font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 19px;
-/* identical to box height */
-
-
-color: #213F7D;
-
-  }
-  .things{
-    display: flex;
-    // justify-content: space-between;
-    
-    padding: 10px 30px;
-    gap: 10px;
-    align-items: center;
-    opacity: 0.4;
-  
-  }
-  .things:hover{
-    border-left: solid 4px #39CDCC;
-    background: #39cdcd1a;
-    opacity: 1;
-}
-.active{
-  display: flex;
-  // justify-content: space-between;
-  align-items: center;
-  padding-right: 48px;
-  padding-left: 30px;
-  padding-top: 11px;
-  border-left: solid 4px #39CDCC;
-  background: #39cdcd1a;
-  gap: 10px;
-}
-
-@media screen and (max-width: 990px) {
 .sideBar {
-  height: 686px;
-  margin-left: -43px;
-  overflow: scroll;
-  position: fixed;
-  background: #FFFFFF;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
-  width: 283px;
-  padding-top: 4px;
-  padding-bottom: 136px;
-  z-index: 1;
-  display: none;
-  top: 133px;
+	height: 686px;
+	overflow: scroll;
+	position: fixed;
+	background: #FFFFFF;
+	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+	width: 283px;
+	padding-top: 39px;
+	padding-bottom: 136px;
+	z-index: 1;
+	top: 133px;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
+.sideBarItem {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 48px;
+	padding-left: 30px;
+	padding-top: 11px;
+	padding-bottom: 10px;
+	p {
+		font-family: $font-family_1;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 19px;
+		color: $color_1;
+		font-family: $font-family_1;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 19px;
+		color: $color_1;
+	}
+}
+.sideBarItemm {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 48px;
+	padding-left: 30px;
+	padding-top: 11px;
+	padding-bottom: 10px;
+}
+.things {
+	display: flex;
+	// justify-content: space-between;
+	padding: 10px 30px;
+	gap: 10px;
+	align-items: center;
+	opacity: 0.8;
+	&:hover {
+		border-left: solid 4px #39CDCC;
+		background: #39cdcd1a;
+		opacity: 1;
+	}
+}
+.active {
+	display: flex;
+	// justify-content: space-between;
+	align-items: center;
+	padding-right: 48px;
+	padding-left: 30px;
+	padding-top: 11px;
+	border-left: solid 4px #39CDCC;
+	background: #39cdcd1a;
+	gap: 10px;
+  color: #213F7D;
+}
+@media screen and (max-width: 990px) {
+	.sideBar {
+		height: 686px;
+		margin-left: -43px;
+		overflow: scroll;
+		position: fixed;
+		background: #FFFFFF;
+		box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+		width: 283px;
+		padding-top: 4px;
+		padding-bottom: 136px;
+		z-index: 1;
+		display: none;
+    top: 109px;
+	}
+  .search {
+    display: flex;
+    width: 90%;
+    margin-left:20px;
+    margin-top: 20px;
+    input {
+      background: #FFFFFF;
+      width: 100%;
+      border: 1px solid #213F7D;
+      border-radius: 8px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+  }
+  .biSearch {
+    background: #39CDCC;
+    color: $color_1;
+    border-radius: 8px;
+    border: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding: 13px 21px;
+  }
+  .personal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 33px;
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+  .user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  .docs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+  }
+  
 }
