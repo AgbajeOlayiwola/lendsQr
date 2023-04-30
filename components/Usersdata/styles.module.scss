@@ -1,114 +1,107 @@
-.tbody{
-    position: relative;
-}
-.moreI{
-    position: absolute;
-    background: white;
-    background: #FFFFFF;
-border: 1px solid rgba(84, 95, 125, 0.04);
-box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
-border-radius: 4px;
-z-index: 100000;
-right: -4px;
+$color_1: #545F7D;
+$font-family_1: 'Poppins';
 
-padding: 23px 21px;
+.tbody {
+	position: relative;
+	tr {
+		td {
+			p {
+				font-family: $font-family_1;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 16px;
+				color: $color_1;
+			}
+			border-bottom: 1pt solid rgba(33, 63, 125, 0.1);
+		}
+		border-bottom: 1px solid black;
+		height: 80px;
+	}
 }
-.moreI div{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8.46px;
-
+.moreI {
+	position: absolute;
+	background: white;
+	background: #FFFFFF;
+	border: 1px solid rgba(84, 95, 125, 0.04);
+	box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+	border-radius: 4px;
+	z-index: 100000;
+	right: -4px;
+	padding: 23px 21px;
+	div {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 8.46px;
+	}
 }
-.donstShowI{
-    display: none;
+.donstShowI {
+	display: none;
 }
-.moreII{
-    top: -10px;
-    position: absolute;
-    left: 5px;
-    background: #FFFFFF;
-    border: 1px solid rgba(84, 95, 125, 0.14);
-    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
-    border-radius: 4px;
-    padding: 30px 20px;
-    min-height: 600px;
-    min-width: 270px;
-    z-index: 9;
+.moreII {
+	top: -10px;
+	position: absolute;
+	left: 5px;
+	background: #FFFFFF;
+	border: 1px solid rgba(84, 95, 125, 0.14);
+	box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+	border-radius: 4px;
+	padding: 30px 20px;
+	min-height: 600px;
+	min-width: 270px;
+	z-index: 9;
+	form {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		gap: 20px;
+		div {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			gap: 6px;
+		}
+	}
+	input {
+		background: #FFFFFF;
+		opacity: 0.2;
+		border: 1px solid #213F7D;
+		border-radius: 8px;
+		padding: 12px 20px;
+	}
+	select {
+		background: #FFFFFF;
+		opacity: 0.2;
+		border: 1px solid #213F7D;
+		border-radius: 8px;
+		padding: 12px 20px;
+	}
 }
-.moreII form{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 20px;
+.buttons {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row !important;
+	align-items: center;
+	gap: 14px;
+	margin-top: 30px;
+	button {
+		width: 50%;
+		cursor: pointer;
+	}
 }
-.moreII form div{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 6px;
+.inactive {
+	background: #545f7d20;
+	padding: 7px 13px;
+	border-radius: 100px;
+	text-align: center;
+	p {
+		margin: 0px;
+	}
 }
-.moreII input{
-    background: #FFFFFF;
-opacity: 0.2;
-border: 1px solid #213F7D;
-border-radius: 8px;
-padding: 12px 20px;
+.usrName {
+	cursor: pointer;
 }
-.moreII select{
-    background: #FFFFFF;
-opacity: 0.2;
-border: 1px solid #213F7D;
-border-radius: 8px;
-padding: 12px 20px;
+.edit {
+	cursor: pointer;
 }
-.buttons{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row !important;
-    align-items: center;
-    gap: 14px;
-    margin-top: 30px;
-  
-}
-.buttons button{
-    width: 50%;
-    cursor: pointer;
-}
-.inactive{
-    background: #545f7d20;
-padding: 7px 13px;
-border-radius: 100px;
-text-align: center;
-
-}
-.inactive p{
-    margin: 0px;
-}
-.tbody tr td p{
-    font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 16px;
-/* identical to box height */
-
-
-color: #545F7D;
-
-}
-.usrName{
-    cursor: pointer;
-}
-.edit{
-    cursor: pointer;
-}
-.tbody tr {
-        border-bottom: 1px solid black;
-      
-}
-
-
-.tbody tr td {
-    border-bottom: 1pt solid rgba(33, 63, 125, 0.1);;
-  }

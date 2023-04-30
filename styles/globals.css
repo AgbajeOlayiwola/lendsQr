@@ -23,3 +23,12 @@ body{
         table{
             border-collapse: collapse;
     }
+    label{
+        font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+
+color: #545F7D;
+    }
