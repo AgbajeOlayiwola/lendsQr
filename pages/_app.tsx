@@ -35,18 +35,18 @@ const LoadingScreen = () => {
     };
   });
 
-  return (
-    loaded && (
-      <div
-        className={
-          router.pathname.includes("Admin")
-            ? "spinnerWrapper"
-            : "otherSpinnerWrapper"
-        }
-      >
-        <Lottie options={socialOptions} height={200} width={200} />
-      </div>
-    )
+  return !loaded ? (
+    <>{null}</>
+  ) : (
+    <div
+      className={
+        router.pathname.includes("Admin")
+          ? "spinnerWrapper"
+          : "otherSpinnerWrapper"
+      }
+    >
+      <Lottie options={socialOptions} height={200} width={200} />
+    </div>
   );
 };
 
