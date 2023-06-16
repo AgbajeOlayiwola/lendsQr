@@ -61,7 +61,7 @@ const Dashboard = () => {
         console.log(error.response);
       });
   }, []);
-  const handlePageChange = ({ selected }) => {
+  const handlePageChange = ({ selected }: { selected: number }) => {
     setPageNumber(selected);
   };
   const usersPerPage = listOfUsers;
