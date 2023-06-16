@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdOutlineMoreVert } from "react-icons/md";
 import { AiOutlineEye } from "react-icons/ai";
 import { GrUserExpert } from "react-icons/gr";
@@ -21,6 +21,13 @@ const UsersData = ({
   action: any;
 }) => {
   const [showMoreI, setShowMoreI] = useState(false);
+  const [date, setDate] = useState([]);
+  const [formatedDate, setFormtedDate] = useState("");
+
+  useEffect(() => {
+    setDate(createdAt.split("T"));
+  }, []);
+
   return (
     <>
       <tbody className={styles.tbody}>
@@ -35,16 +42,35 @@ const UsersData = ({
             <p>{email}</p>
           </td>
           <td onClick={action} className={styles.usrName}>
-            <p>{phoneNumbr}</p>
+            <p>{phoneNumbr.replace("x", "")}</p>
           </td>
           <td onClick={action} className={styles.usrName}>
-            <p>{createdAt}</p>
+            <p>
+              {new Date(date[0]).toLocaleDateString("en-En", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+                hour: "numeric",
+                minute: "numeric",
+                hour12: true,
+              })}{" "}
+            </p>
           </td>
 
           <td onClick={action} className={styles.usrName}>
-            <div className={styles.inactive}>
-              <p>Inactive</p>
-            </div>
+            {email.includes("@gmail.com") ? (
+              <div className={styles.inactive}>
+                <p>Inactive</p>
+              </div>
+            ) : email.includes("yahoo.com") ? (
+              <div className={styles.active}>
+                <p>Active</p>
+              </div>
+            ) : email.includes("hotmail.com") ? (
+              <div className={styles.blacklisted}>
+                <p>Blacklisted</p>
+              </div>
+            ) : null}
           </td>
           <td
             className={styles.edit}
@@ -67,48 +93,6 @@ const UsersData = ({
             <GrUserExpert />
             <p>Activate User</p>
           </div>
-        </div>
-        <div className={showMoreI ? styles.moreII : styles.donstShowI}>
-          <form>
-            <div>
-              <label>Organization</label>
-              <select>
-                <option>Select</option>
-              </select>
-            </div>
-            <div>
-              <label>Username</label>
-              <input type="text" placeholder="User" />
-            </div>
-            <div>
-              <label>Email</label>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div>
-              <label>Date</label>
-              <input type="Date" placeholder="Date" />
-            </div>
-            <div>
-              <label>Status</label>
-              <select>
-                <option>Select</option>
-              </select>
-            </div>
-            <div className={styles.buttons}>
-              <ButtonComponent
-                action={""}
-                type="submit"
-                text="Reset"
-                fill={false}
-              />
-              <ButtonComponent
-                action={""}
-                type="submit"
-                text="Filter"
-                fill={true}
-              />
-            </div>
-          </form>
         </div>
       </tbody>
     </>

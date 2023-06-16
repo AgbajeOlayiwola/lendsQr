@@ -7,6 +7,8 @@ import { useRouter } from "next/router";
 import { slide as Menu } from "react-burger-menu";
 import NotificationSvg from "../../SVGs/NotificationSvg";
 import { BsCaretDownFill } from "react-icons/bs";
+import LogoutSvg from "../../SVGs/logoutSvg";
+import Link from "next/link";
 
 var burgerMenuStyle = {
   bmBurgerButton: {
@@ -70,7 +72,9 @@ const SideBar = () => {
     // unsubscribe from the event on component unmount
     return () => window.removeEventListener("resize", handleWindowResize);
   }, [width]);
-
+  const backToLogin = () => {
+    router.push("/");
+  };
   return (
     <>
       {" "}
@@ -105,6 +109,14 @@ const SideBar = () => {
               </div>
             );
           })}
+          <hr className={styles.hr} />
+
+          <div className={styles.things} onClick={backToLogin}>
+            <LogoutSvg />
+            <p>Logout</p>
+          </div>
+
+          <p className={styles.version}>v1.2.0</p>
         </div>
       ) : (
         <Menu styles={burgerMenuStyle}>

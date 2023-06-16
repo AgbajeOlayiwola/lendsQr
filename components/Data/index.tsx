@@ -18,6 +18,7 @@ import TransactionsSvg from "../SVGs/TransactionsSvg";
 import ServidesSvg from "../SVGs/ServidesSvg";
 import FessSvgs from "../SVGs/FessSvgs";
 import Badge from "../SVGs/badge";
+import SystemMessagesSvg from "../SVGs/systemMessagesSvg";
 
 export const sideBarData = [
   {
@@ -26,7 +27,7 @@ export const sideBarData = [
       {
         icon: <HiUsers />,
         title: "Users",
-        url: "/Dashboard",
+        url: "/Admin/Dashboard",
       },
       {
         icon: <FaUsers />,
@@ -132,6 +133,11 @@ export const sideBarData = [
         icon: <FaClipboardList />,
         title: "Audit Logs",
         url: "auditlogs",
+      },
+      {
+        icon: <SystemMessagesSvg />,
+        title: "Systems Messages",
+        url: "systemMmessages",
       },
     ],
   },

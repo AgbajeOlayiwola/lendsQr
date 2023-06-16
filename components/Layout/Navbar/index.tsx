@@ -4,6 +4,7 @@ import { BiSearch } from "react-icons/bi";
 import { BsCaretDownFill } from "react-icons/bs";
 import NotificationSvg from "../../SVGs/NotificationSvg";
 import styles from "./styles.module.scss";
+import Image from "next/image";
 
 const Navbar = () => {
   const [width, setWidth] = useState(991);
@@ -29,7 +30,7 @@ const Navbar = () => {
             <LogoSvg />
 
             <div className={styles.search}>
-              <input type="text" />
+              <input type="text" placeholder="Search for anything" />
               <div className={styles.biSearch}>
                 <BiSearch />
               </div>
@@ -37,8 +38,14 @@ const Navbar = () => {
           </div>
           <div className={styles.personal}>
             <div className={styles.docs}>
-              <p>Docs</p>
+              <p className={styles.Docs}>Docs</p>
               <NotificationSvg />
+              {/* <Image
+                src={"/Assets/Images/notification.png"}
+                alt="notification"
+                width={19.67}
+                height={22.74}
+              /> */}
             </div>
 
             <div className={styles.user}>

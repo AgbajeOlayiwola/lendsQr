@@ -11,12 +11,30 @@ $font-family_1: 'Poppins';
 	padding-top: 39px;
 	padding-bottom: 136px;
 	z-index: 1;
-	top: 133px;
+	top: 130px;
 	-ms-overflow-style: none;
 	scrollbar-width: none;
 	&::-webkit-scrollbar {
 		display: none;
 	}
+}
+.hr{
+	margin-top: 50px;
+	border: 1px solid #213F7D;
+	opacity: 0.1;
+}
+.version{
+	margin-left: 25px;
+	ont-family: 'Work Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+
+
+color: #213F7D;
+
 }
 .sideBarItem {
 	display: flex;
@@ -52,6 +70,7 @@ $font-family_1: 'Poppins';
 }
 .things {
 	display: flex;
+	cursor: pointer;
 	// justify-content: space-between;
 	padding: 10px 30px;
 	gap: 10px;
@@ -63,6 +82,7 @@ $font-family_1: 'Poppins';
 		opacity: 1;
 	}
 }
+
 .active {
 	display: flex;
 	// justify-content: space-between;

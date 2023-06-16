@@ -28,7 +28,7 @@ const HomePage = () => {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     if (!error) {
-      router.push("Dashboard");
+      router.push("/Admin/Dashboard");
     }
   };
 
@@ -75,7 +75,7 @@ const HomePage = () => {
             </div>
             <div className={styles.forgotPasswordLogin}>
               <ButtonComponent
-                action=""
+                action={null}
                 type="submit"
                 text="LOG IN"
                 fill={true}

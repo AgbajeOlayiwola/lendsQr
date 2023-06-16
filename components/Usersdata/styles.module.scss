@@ -48,7 +48,7 @@ $font-family_1: 'Poppins';
 	box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
 	border-radius: 4px;
 	padding: 30px 20px;
-	min-height: 600px;
+	min-height: 505px;
 	min-width: 270px;
 	z-index: 9;
 	form {
@@ -93,10 +93,33 @@ $font-family_1: 'Poppins';
 .inactive {
 	background: #545f7d20;
 	padding: 7px 13px;
+	width: fit-content;
 	border-radius: 100px;
 	text-align: center;
 	p {
 		margin: 0px;
+	}
+}
+.active {
+	background: #39cd6321;
+	padding: 7px 13px;
+	border-radius: 100px;
+	text-align: center;
+	width: fit-content;
+	p {
+		color:#39CD62 !important;
+		margin: 0px;
+	}
+}
+.blacklisted {
+	background: #e4033b2c;;
+	padding: 7px 13px;
+	border-radius: 100px;
+	text-align: center;
+	width: fit-content;
+	p {
+		margin: 0px;
+		color: #E4033B !important;
 	}
 }
 .usrName {
