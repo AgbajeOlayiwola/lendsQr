@@ -61,9 +61,14 @@ const Dashboard = () => {
         console.log(error.response);
       });
   }, []);
-
+  const handlePageChange = ({ selected }) => {
+    setPageNumber(selected);
+  };
   const usersPerPage = listOfUsers;
   const pagesVisited = pageNumber * usersPerPage;
+  const startIndex = pageNumber * usersPerPage;
+  const endIndex = startIndex + usersPerPage;
+  const slicedData = apiData.slice(startIndex, endIndex);
   // const paginateData = Paginate(apiData, currentPage, pageSize);
   const pageCount = Math.ceil(apiData.length / usersPerPage);
   return (
@@ -413,40 +418,38 @@ const Dashboard = () => {
               {loading ? (
                 <Lottie options={defaultOptions} height={500} width={500} />
               ) : apiData ? (
-                Object.keys(apiData)
-                  ?.slice(pagesVisited, pagesVisited + usersPerPage)
-                  ?.map((index, item) => (
-                    <>
-                      <UsersData
-                        action={() =>
-                          axios
-                            .get(
-                              `https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/${apiData[item].id}`,
-                              {
-                                headers: {
-                                  "X-Client-Type": "web",
-                                },
-                              }
-                            )
-                            .then((response: any) => {
-                              setUsersFullData(response.data);
-                              if (usersFullData !== undefined) {
-                                setUsrsFull((prev) => !prev);
-                              }
-                            })
-                            .catch((error) => {
-                              console.log(error.response);
-                            })
-                        }
-                        key={index}
-                        orgName={apiData[item].orgName}
-                        userName={apiData[item].userName}
-                        email={apiData[item].email}
-                        phoneNumbr={apiData[item].phoneNumber}
-                        createdAt={apiData[item].createdAt}
-                      />
-                    </>
-                  ))
+                slicedData?.map((item) => (
+                  <>
+                    <UsersData
+                      action={() =>
+                        axios
+                          .get(
+                            `https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/${item.id}`,
+                            {
+                              headers: {
+                                "X-Client-Type": "web",
+                              },
+                            }
+                          )
+                          .then((response: any) => {
+                            setUsersFullData(response.data);
+                            if (usersFullData !== undefined) {
+                              setUsrsFull((prev) => !prev);
+                            }
+                          })
+                          .catch((error) => {
+                            console.log(error.response);
+                          })
+                      }
+                      key={item.id}
+                      orgName={item.orgName}
+                      userName={item.userName}
+                      email={item.email}
+                      phoneNumbr={item.phoneNumber}
+                      createdAt={item.createdAt}
+                    />
+                  </>
+                ))
               ) : null}
             </table>
           </div>
@@ -454,21 +457,20 @@ const Dashboard = () => {
             <div className={styles.paginationsDrop}>
               <p>Showing</p>
               <select onChange={(e: any) => setListOfUsers(e.target.value)}>
-                <option>100</option>
                 <option value={100}>100</option>
+                <option value={70}>70</option>
                 <option value={50}>50</option>
+                <option value={20}>20</option>
                 <option value={10}>10</option>
               </select>
-              <p>out of 100</p>
+              <p>out of {apiData.length}</p>
             </div>
             {!apiData.length ? null : (
               <ReactPaginate
                 previousLabel={<IoIosArrowBack style={{ fontSize: "18px" }} />}
                 nextLabel={<IoIosArrowForward style={{ fontSize: "18px" }} />}
-                pageCount={pageCount}
-                onPageChange={({ selected }) => {
-                  setPageNumber(selected);
-                }}
+                pageCount={Math.ceil(apiData.length / usersPerPage)}
+                onPageChange={handlePageChange}
                 containerClassName={styles.paginationBtns}
                 previousClassName={styles.previousBtns}
                 nextLinkClassName={styles.nextBtns}
