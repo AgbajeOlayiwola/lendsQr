@@ -79,7 +79,7 @@ color: #545F7D;
         position: fixed;
         top: 40;
         left: 50;
-        background: #f5f6fa;
+        background: white;
         z-index: 9; 
     }
     .spinnerWrapper{
@@ -91,6 +91,6 @@ color: #545F7D;
         position: fixed;
         top: 0;
         left: 50;
-        background: #f5f6fa;
+        background: white;
         z-index: 9;
     }

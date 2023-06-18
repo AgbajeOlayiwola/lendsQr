@@ -5,6 +5,8 @@ import { GrUserExpert } from "react-icons/gr";
 import styles from "./styles.module.scss";
 import BlacklistUserSvg from "../SVGs/blacklistUser";
 import ButtonComponent from "../Button";
+import axios from "axios";
+import { useRouter } from "next/router";
 const UsersData = ({
   orgName,
   userName,
@@ -12,6 +14,8 @@ const UsersData = ({
   phoneNumbr,
   createdAt,
   action,
+  id,
+  typeSet,
 }: {
   orgName: any;
   userName: any;
@@ -19,11 +23,15 @@ const UsersData = ({
   phoneNumbr: any;
   createdAt: any;
   action: any;
+  id: any;
+  typeSet: any;
 }) => {
   const [showMoreI, setShowMoreI] = useState(false);
   const [date, setDate] = useState([]);
-  const [formatedDate, setFormtedDate] = useState("");
 
+  const [formatedDate, setFormtedDate] = useState("");
+  const [type, setType] = useState(true);
+  const router = useRouter();
   useEffect(() => {
     setDate(createdAt.split("T"));
   }, []);
@@ -81,7 +89,9 @@ const UsersData = ({
         </tr>
 
         <div className={showMoreI ? styles.moreI : styles.donstShowI}>
-          <div>
+          <div
+            onClick={() => router.push(`/Admin/Dashboard/UserDetails/${id}`)}
+          >
             <AiOutlineEye />
             <p>View Details</p>
           </div>

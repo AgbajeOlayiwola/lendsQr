@@ -21,8 +21,13 @@ const LoadingScreen = () => {
     const handleStart = (url: string) => (
       url !== router.asPath && setLoaded(true), console.log("started")
     );
-    const handleComplete = (url: string) =>
-      url === router.asPath && setLoaded(false);
+    const handleComplete = (url: string) => {
+      if (url !== router.asPath) {
+        setTimeout(() => {
+          setLoaded(false);
+        }, 1500); // Adjust the delay duration as needed
+      }
+    };
 
     router.events.on("routeChangeStart", handleStart);
     router.events.on("routeChangeComplete", handleComplete);
